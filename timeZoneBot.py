@@ -45,6 +45,8 @@ def inputTime(who, time, filename):
 def request(requester, time, tArray):
     requesterH = int(tArray[requester][0])
     requesterM = int(tArray[requester][1])
+    time = str(time)
+    print("TIME: {}".format(time))
     reqH, reqM = time.split(":")
     reqH = int(reqH)
     reqM = int(reqM)
