@@ -4,7 +4,7 @@ filename = "data.txt"
 
 array = {}
 #inputTime("KAWAII BAAAKA", "12:24", "data.txt")
-#inputTime("KAWAIeee BAAAKA", "23:24", "data.txt")
-readFile(filename)
+#inputTime("Someone else", "20:52", "data.txt")
+tArray = readFile(filename)
 
-
+request("KAWAII BAAAKA", "20:58", tArray)

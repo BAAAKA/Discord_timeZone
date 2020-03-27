@@ -3,7 +3,7 @@ from time import gmtime, strftime
 
 
 def validTime(time):
-    if (re.findall(r'^\d{1,2}:\d{1,2}$', time)):
+    if (re.findall(r'^\d{1,2}(:\d{1,2})?$', time)):
         return True
     else:
         return False
@@ -28,3 +28,21 @@ def getTimeDifference(inputH, inputM):
 
 def inputIntoFile(who, h, m):
     return "{}###{}###{}###\n".format(who, h, m)
+
+def lowerTime(time, amount):
+    while time > amount:
+        time -= amount
+    return time
+
+def getTimeCorrectly(h,m):
+    if h<10:
+        h = "0"+str(h)
+    else:
+        h = str(h)
+    if m<10:
+        m = "0"+str(m)
+    else:
+        m = str(m)
+    return h+":"+m
+
+
