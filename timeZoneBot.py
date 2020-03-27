@@ -1,16 +1,27 @@
 # test
 from functions import *
 
-def loadFile(filename):
+def loadFile(filename, type):
     try:
-        file = open(filename, "w")
+        file = open(filename, type)
     except Exception as e:
         log("Error while loading file: {}".format(e),"e")
     return file
 
+def readFile(filename):
+    tArray = {}
+    file = loadFile(filename, "r")
+    print(file.readlines())
 
-def inputTime(who, time, file):
+    for entry in file.readlines():
+        who, h, m, t = entry.split("###")
+
+    file.close()
+    return tArray
+
+def inputTime(who, time, filename):
     #Input
+    file = loadFile("data.txt", "a")
     log("Input: {}".format(time))
     if not (validTime(time)):
         log("Invalid Input", "e")
@@ -29,6 +40,7 @@ def inputTime(who, time, file):
     log("User: {} has a time difference of {}:{}".format(who, difH, difM))
     inputText = inputIntoFile(who, h, m)
     file.write(inputText)
+    file.close()
 
 
 

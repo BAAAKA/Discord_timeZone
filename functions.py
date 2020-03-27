@@ -27,4 +27,4 @@ def getTimeDifference(inputH, inputM):
     return finalH, finalM
 
 def inputIntoFile(who, h, m):
-    return "{}###{}###{}".format(who, h, m)
+    return "{}###{}###{}###\n".format(who, h, m)

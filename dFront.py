@@ -1,10 +1,10 @@
 from timeZoneBot import *
 
+filename = "data.txt"
 
 array = {}
-file = loadFile("data.txt")
-inputTime("KAWAII BAAAKA", "12:24", file)
-inputTime("KAWAIeee BAAAKA", "23:24", file)
-
+#inputTime("KAWAII BAAAKA", "12:24", "data.txt")
+#inputTime("KAWAIeee BAAAKA", "23:24", "data.txt")
+readFile(filename)
 
 
